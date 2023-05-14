@@ -1,0 +1,96 @@
+@import 'layout';
+
+html{
+    font-size: 62.5%;
+}
+
+body{
+    font-family: 'Hanken Grotesk', sans-serif;
+    margin: 0;
+}
+
+.container{
+    box-shadow: 2rem 5rem 5rem hsl(221, 100%, 96%);
+    overflow: hidden;
+
+    @include respond{
+        box-shadow: 0;
+    }
+}
+
+//////////////////////////////
+/// LEFT SIDE OF THE CONTAINER
+.result{
+    background-image: linear-gradient(to bottom, hsl(252, 100%, 67%), hsl(241, 81%, 54%));
+    color: hsl(241, 100%, 89%);
+
+    &__heading{
+        font-size: 1.5rem;
+    }
+    
+    &__box{
+        background-image: linear-gradient(to bottom, hsla(256, 72%, 46%, 1), hsla(241, 72%, 46%, 0));
+        border-radius: 100%;
+
+        &-score{
+            font-weight: 800;
+            font-size: 5.5rem;
+            color: white;
+        }
+    }
+
+    &__remark{
+        color: white;
+        font-size: 2rem;
+    }
+
+    &__average{
+        text-align: center;
+        font-weight: 500;
+        font-size: 1.1rem;
+        line-height: 1.4rem;
+    }
+}
+
+///////////////////////////
+/// RIGHT SIDE OF THE CONTAINER
+.summary{
+    
+    &__text{
+        color: hsl(224, 30%, 27%);
+    }
+
+    &__continue{
+        background-color: hsl(224, 30%, 27%);
+        border-radius: 100px;
+        text-decoration: none;
+        font-size: 1.2rem;
+        color: white;
+        font-weight: 800;
+
+        &:hover{
+            background-image: linear-gradient(to right top, hsl(241, 81%, 54%), hsl(252, 100%, 67%));
+        }
+    }
+}
+
+/////////////////////
+///UTILITIES
+.red{
+    background-color: hsla(0, 100%, 67%, .03);
+    color: hsl(0, 100%, 67%);
+}
+.yellow{
+    background-color: hsla(39, 100%, 56%, .03);
+    color: hsl(39, 100%, 56%);
+}
+.green{
+    background-color: hsla(166, 100%, 37%, .03);
+    color: hsl(166, 100%, 37%);
+}
+.purple{
+    background-color: hsla(234, 85%, 45%, .03);
+    color: hsl(234, 85%, 45%);
+}
+.feint{color: hsla(224, 30%, 27%, .8);}
+.thick{color: hsl(224, 30%, 27%);}
